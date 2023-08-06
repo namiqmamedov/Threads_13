@@ -35,3 +35,18 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
         throw new Error(`Failed to create/update user: ${error.message} `)
    }
  }
+
+ export async function fetchUser(userId: string) {
+    try {
+        connectToDb();
+
+        return await User
+        .findOne({id: userId})
+        // .populate({
+        //     path: 'communities',
+        //     model: Community
+        // })
+    } catch (error: any) {
+        throw new Error(`Filaed to fetch user ${error.message}`)
+    }
+ }

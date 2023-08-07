@@ -2,7 +2,7 @@
 
 import { FilterQuery, SortOrder } from "mongoose";
 
-import Community from "../models/thread.model"
+import Community from "../models/community.model";
 import Thread from "../models/thread.model";
 import User from "../models/user.model";
 
@@ -69,7 +69,6 @@ export async function fetchCommunityDetails(id: string) {
     throw error;
   }
 }
- 
 
 export async function fetchCommunityPosts(id: string) {
   try {

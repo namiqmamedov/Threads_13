@@ -69,6 +69,7 @@ export async function fetchCommunityDetails(id: string) {
     throw error;
   }
 }
+ 
 
 export async function fetchCommunityPosts(id: string) {
   try {
